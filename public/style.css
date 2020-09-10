@@ -1,0 +1,124 @@
+body {
+  background-color: #003750;
+  color: #a0c0d9;
+  font-family: "Roboto", "Helvetica", sans-serif;
+}
+#title {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-around;
+  margin-bottom: 3rem;
+}
+#locationSearch {
+  margin-top: 1rem;
+}
+#search {
+  height: 2em;
+  width: 20em;
+}
+#submit {
+  background-color: orange;
+  width: 6rem;
+  height: 2.2rem;
+  font-weight: 600;
+  font-size: 0.9r=em;
+  border: none;
+  color: black;
+}
+#weatherInfo {
+  background-color: #709bb3;
+  color: #000000;
+  width: 50%;
+  height: 75%;
+  margin: auto;
+  border-radius: 2rem;
+  margin-top: 3rem;
+}
+#icon {
+  width: 15rem;
+  height: 15rem;
+}
+.left {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+margin-left:2rem;
+margin-right:5rem;
+}
+.wrap {
+  display: flex;
+  justify-content: center;
+}
+.top {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 10rem;
+  color: #000000;
+}
+#city {
+  font-size: 2em;
+}
+#description {
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+.items {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+margin-right:3rem;
+  font-size: 1.3em;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+#temp {
+  font-size: 3rem;
+}
+
+.banner {
+    align-content: center;
+    display: none;
+    justify-content: center;
+    width: 100%;
+  }
+  @media screen and (max-width: 700px) {
+    body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+     
+    }
+    #icon {
+      max-width: 100%;
+    }
+    #weatherInfo{
+      position: relative;
+      overflow: hidden;
+      justify-items: center;
+      width:100%;
+      margin-bottom: 2rem;
+      margin-top: 1rem;
+      
+    }
+    .top{
+  margin-left: 1rem;
+    }
+    .wrap, #title{
+      display:flex;
+      flex-wrap:wrap;
+      flex-direction: column; 
+      margin-left: 1rem;
+    }
+         
+      
+  }
+  @media screen and (max-width: 400px) {
+  #weatherInfo{
+    width:100vw;
+    height:100vh;
+    margin:0;
+  }
+  }

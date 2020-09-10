@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Weather app</title>
+    <meta name="description" content="Weather app for Smash it">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    
+  <!-- Web Application Manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Chrome for Android theme color -->
+  <meta name="theme-color" content="#a0c0d9">
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="PSK">
+  <link rel="icon" sizes="192x192" href="images/touch/icon-192x192.png">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Weather Smash App">
+  <link rel="apple-touch-icon" href="images/touch/icon-192x192.png">
+
+  <!-- Tile for Win8 -->
+  <meta name="msapplication-TileColor" content="#a0c0d9">
+  <meta name="msapplication-TileImage" content="images/touch/icon-192x192.png">
+
+</head>
+
+<body>
+    <nav id="title">
+        <h1>Weather Smash</h1>
+        <div id="locationSearch">
+            <label for="search">City</label>
+            <input name="search" id="search" type="text" aria-labelledby=""  placeholder="Search for your city" autofocus />
+           
+            <button id="submit">SEARCH</button>
+        </div>
+    </nav>
+    <main>
+    <section id="installBanner" class="banner">
+            <button id="installBtn">Install app</button>
+          </section>
+    <section id="weatherInfo">
+        <div class="top">
+        <h2 id="city">New York</h2>
+        <div id="time">Thursday 11th September 2020, </div>
+        </div>
+        <section class="wrap">
+            <section class="left">
+
+                <h3 id="description">Winter snowy</h3>
+
+                <img id="icon" src="" alt="Weather icon" />
+            </section>
+            <aside class="items">
+                <h4> <span id="temp">10 °C</span></h4>
+                <div>Pressure: <span id="pressure">28</span>hPa</div>
+                <div>Humidity: <span id="humidity">34</span>%</div>
+                <div>Wind: <span id="wind">53</span>m/s</div>
+            </aside>
+        </section>
+    </section>
+</main>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/7.19.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="/__/firebase/7.19.1/firebase-analytics.js"></script>
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
+<script>
+    if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('serviceWorker.js')
+        .then((reg) => {
+          console.log('Service worker registered.', reg);
+        });
+  });
+}
+</script>
+<script src="install.js"></script>
+    <script src="app.js">
+    </script>
+</body>
+
+</html>
